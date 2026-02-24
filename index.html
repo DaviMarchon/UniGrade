@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniGrade - Gestão Acadêmica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-content">
+        <header class="top-bar">
+            <h1>UniGrade</h1>
+            <button class="btn-manage" onclick="toggleSubjectModal()">⚙️ Minhas Matérias</button>
+        </header>
+        
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th class="time-header">Horário</th>
+                    <th>Segunda</th><th>Terça</th><th>Quarta</th><th>Quinta</th><th>Sexta</th><th>Sábado</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-body"></tbody>
+        </table>
+    </div>
+
+    <div id="subject-modal" class="modal">
+        <div class="modal-content">
+            <h2>Gerenciar Disciplinas</h2>
+            <div class="subject-creator">
+                <input type="text" id="new-subject-name" placeholder="Nome da Matéria">
+                <button class="btn-manage" onclick="createNewSubject()">Add</button>
+            </div>
+            <div id="subjects-list-manage"></div>
+            <button class="btn-success" onclick="toggleSubjectModal()" style="margin-top: 20px;">Fechar</button>
+        </div>
+    </div>
+
+    <aside id="side-panel">
+        <button class="close-btn" onclick="closePanel()">✕</button>
+        <p id="panel-info"></p>
+        <h2 id="panel-subject-title">Vincular</h2>
+        
+        <select id="subject-selector" class="field" onchange="saveSlot()">
+            </select>
+
+        <div id="content-section" style="display: none;">
+            <h3>Provas / Trabalhos</h3>
+            <div id="task-container"></div>
+            <div style="margin-top: 20px;">
+                <input type="text" id="task-title" class="field" placeholder="O que agendar?">
+                <input type="date" id="task-date" class="field">
+                <button class="btn-success" onclick="addTask()">Salvar Evento</button>
+            </div>
+        </div>
+    </aside>
+
+    <script src="codigo.js"></script>
+</body>
+</html>
