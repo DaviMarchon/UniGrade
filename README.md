@@ -9,7 +9,7 @@ O **UniGrade** é uma aplicação web focada na organização da rotina universi
 - **Gerenciamento de Disciplinas:** Adicione matérias e o sistema gera automaticamente uma cor exclusiva para cada uma.
 - **Grade Horária Interativa:** Clique nos horários para vincular as matérias cadastradas.
 - **Sincronização de Tarefas:** Ao adicionar uma prova em uma matéria, ela aparece automaticamente em todos os horários daquela disciplina na semana.
-- **Persistência de Dados:** Utiliza o `LocalStorage` para que suas informações não sumam ao fechar o navegador.
+- **Dados Armazenados:** Utiliza o `LocalStorage` para que suas informações não sumam ao fechar o navegador.
 - **Contagem Regressiva:** O sistema calcula quantos dias faltam para os seus eventos acadêmicos.
 
 ## 🛠️ Tecnologias Utilizadas
